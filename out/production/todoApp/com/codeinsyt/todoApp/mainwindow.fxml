@@ -8,7 +8,9 @@
 <BorderPane fx:controller="com.codeinsyt.todoApp.Controller"
             xmlns:fx="http://javafx.com/fxml" >
     <left>
-        <ListView></ListView>
+        <ListView fx:id="todoListView">
+
+        </ListView>
     </left>
 
 </BorderPane>
