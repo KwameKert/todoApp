@@ -3,11 +3,12 @@ package com.codeinsyt.todoApp;
 import com.codeinsyt.todoApp.dataModel.TodoItem;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Controller {
 
-    private List<TodoItem> todos;
+    private List<TodoItem> todoItems;
 
     public Controller(){
         TodoItem todoItem1 = new TodoItem("Work on skuulBa", "Need to finish building the skuulba application", LocalDate.of(2020,05,28));
@@ -15,6 +16,15 @@ public class Controller {
         TodoItem todoItem3 = new TodoItem("Build compiler", "Build an ILOC compiler", LocalDate.of(2020,06,7));
         TodoItem todoItem4 = new TodoItem("Docker Setup", "Set skuulba on docker", LocalDate.of(2020,06,7));
         TodoItem todoItem5 = new TodoItem("Hopepress Deployment", "Deploy website to firebase server", LocalDate.of(2020,06,7));
+
+        todoItems = new ArrayList<TodoItem>();
+        todoItems.add(todoItem1);
+        todoItems.add(todoItem2);
+        todoItems.add(todoItem3);
+        todoItems.add(todoItem4);
+        todoItems.add(todoItem5);
     }
+
+
 
 }
