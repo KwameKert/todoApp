@@ -1,0 +1,5 @@
+Work on skuulBa	Need to finish building the skuulba application	May 28, 2020	
+Project work chapter 4	Work on final year project chapter 4 documentation	May 29, 2020	
+Build compiler	Build an ILOC compiler	June 7, 2020	
+Docker Setup	Set skuulba on docker	May 27, 2020	
+Hopepress Deployment	Deploy website to firebase server	April 7, 2020	

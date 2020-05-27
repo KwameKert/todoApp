@@ -1,5 +1,6 @@
 package com.codeinsyt.todoApp;
 
+import com.codeinsyt.todoApp.dataModel.TodoData;
 import com.codeinsyt.todoApp.dataModel.TodoItem;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -44,6 +45,7 @@ public class Controller {
         this.addEventListener();
 
         //populating listview
+        TodoData.getInstance().setTodoItems(this.todoItems);
         this.todoListView.getItems().setAll(this.todoItems);
         this.todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         this.todoListView.getSelectionModel().selectFirst();

@@ -1,5 +1,6 @@
 package com.codeinsyt.todoApp;
 
+import com.codeinsyt.todoApp.dataModel.TodoData;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,5 +20,10 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    @Override
+    public void stop() throws Exception {
+        TodoData.getInstance().saveTodoItems();
     }
 }

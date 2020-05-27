@@ -16,7 +16,7 @@ import java.util.List;
 public class TodoData {
 
     private static TodoData instance = new TodoData();
-    private String filename;
+    private String filename = "TodoList.txt";
     private DateTimeFormatter df;
     private List<TodoItem> todoItems;
 
@@ -67,7 +67,7 @@ public class TodoData {
         }
     }
 
-    public void saveTodoItem() throws IOException {
+    public void saveTodoItems() throws IOException {
         Path path = Paths.get(filename);
         BufferedWriter bw = Files.newBufferedWriter(path);
         try{
