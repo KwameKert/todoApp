@@ -10,6 +10,7 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextArea;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,12 +51,13 @@ public class Controller {
 
     //on adding listener on todoItem change
     public void addEventListener(){
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("MMMM d, yyyy");
         this.todoListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TodoItem>() {
             @Override
             public void changed(ObservableValue<? extends TodoItem> observableValue, TodoItem todoItem, TodoItem t1) {
                 if(t1 != null){
                     todoItemDetails.setText(t1.getDetails());
-                    dueDateDetails.setText(t1.getDueDate().toString());
+                    dueDateDetails.setText(df.format(t1.getDueDate()));
                 }
             }
         });

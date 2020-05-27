@@ -23,13 +23,13 @@
             <HBox alignment="CENTER">
                 <Label text="Due: ">
                     <font>
-                        <Font name="Times new Roman" size="20"/>
+                        <Font name="Times new Roman bold" size="20"/>
                     </font>
                 </Label>
 
                 <Label fx:id="dueDateDetails">
                     <font>
-                        <Font name="Times new Roman" size="20"/>
+                        <Font name="Times new Roman bold" size="20"/>
                     </font>
                 </Label>
 
