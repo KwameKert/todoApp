@@ -29,24 +29,24 @@ public class Controller {
     private Label dueDateDetails;
 
     public void initialize(){
-        TodoItem todoItem1 = new TodoItem("Work on skuulBa", "Need to finish building the skuulba application", LocalDate.of(2020,05,28));
-        TodoItem todoItem2 = new TodoItem("Project work chapter 4", "Work on final year project chapter 4 documentation", LocalDate.of(2020,05,29));
-        TodoItem todoItem3 = new TodoItem("Build compiler", "Build an ILOC compiler", LocalDate.of(2020,06,7));
-        TodoItem todoItem4 = new TodoItem("Docker Setup", "Set skuulba on docker", LocalDate.of(2020,05,27));
-        TodoItem todoItem5 = new TodoItem("Hopepress Deployment", "Deploy website to firebase server", LocalDate.of(2020,04,7));
-
-        todoItems = new ArrayList<TodoItem>();
-        todoItems.add(todoItem1);
-        todoItems.add(todoItem2);
-        todoItems.add(todoItem3);
-        todoItems.add(todoItem4);
-        todoItems.add(todoItem5);
+//        TodoItem todoItem1 = new TodoItem("Work on skuulBa", "Need to finish building the skuulba application", LocalDate.of(2020,05,28));
+//        TodoItem todoItem2 = new TodoItem("Project work chapter 4", "Work on final year project chapter 4 documentation", LocalDate.of(2020,05,29));
+//        TodoItem todoItem3 = new TodoItem("Build compiler", "Build an ILOC compiler", LocalDate.of(2020,06,7));
+//        TodoItem todoItem4 = new TodoItem("Docker Setup", "Set skuulba on docker", LocalDate.of(2020,05,27));
+//        TodoItem todoItem5 = new TodoItem("Hopepress Deployment", "Deploy website to firebase server", LocalDate.of(2020,04,7));
+//
+//        todoItems = new ArrayList<TodoItem>();
+//        todoItems.add(todoItem1);
+//        todoItems.add(todoItem2);
+//        todoItems.add(todoItem3);
+//        todoItems.add(todoItem4);
+//        todoItems.add(todoItem5);
 
         this.addEventListener();
 
         //populating listview
-        TodoData.getInstance().setTodoItems(this.todoItems);
-        this.todoListView.getItems().setAll(this.todoItems);
+       // TodoData.getInstance().setTodoItems(this.todoItems);
+        this.todoListView.getItems().setAll(TodoData.getInstance().getTodoItems());
         this.todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         this.todoListView.getSelectionModel().selectFirst();
     }

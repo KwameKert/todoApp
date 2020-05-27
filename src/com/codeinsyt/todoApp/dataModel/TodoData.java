@@ -45,9 +45,9 @@ public class TodoData {
         //reading file contents
         BufferedReader br = Files.newBufferedReader(path);
         String input;
-
+        try{
         while((input = br.readLine()) != null){
-            try{
+
                 //splitting line into array items
                 String[] itemPieces = input.split("\t");
                 String shortDescription = itemPieces[0];
@@ -58,11 +58,10 @@ public class TodoData {
                 TodoItem todoItem = new TodoItem(shortDescription, details, localDate);
                 //pushing item to items list
                 this.todoItems.add(todoItem);
-
-            }finally {
-                if( br != null){
-                    br.close();
-                }
+            }
+        }finally {
+            if( br != null){
+                br.close();
             }
         }
     }

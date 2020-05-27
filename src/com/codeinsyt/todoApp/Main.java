@@ -7,6 +7,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Main extends Application {
 
     @Override
@@ -24,6 +26,20 @@ public class Main extends Application {
 
     @Override
     public void stop() throws Exception {
-        TodoData.getInstance().saveTodoItems();
+        try{
+            TodoData.getInstance().saveTodoItems();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+
+    @Override
+    public void init() throws Exception {
+        try{
+            TodoData.getInstance().loadTodoItems();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
